@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Coloque um Título Aqui{% endblock %}
+
+{% block corpo %}
+    <p>bdpratico\exemplo01\templates\exemplo01\listar_pessoas.html</p>
+
+    <table class="table table-striped table-hover">
+        <th>Nome</th>
+        <th>eMail</th>
+        <th>Celular</th>
+        {% for regs in pessoas %}
+            <tr>
+                <td>{{ regs.nome }}</td>
+                <td>{{ regs.email }}</td>
+                <td>{{ regs.celular }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block rodape %}Enviamos aqui o que desejamos que apareça escrito na área do rodapé{% endblock %}
